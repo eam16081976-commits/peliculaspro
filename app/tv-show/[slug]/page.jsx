@@ -54,12 +54,12 @@ export async function generateMetadata({ params }) {
 
   if (genreSlugMap.has(processedSlug)) {
     const genre = genreSlugMap.get(processedSlug);
-    return { title: `Justwatch - ${genre.name} TV Series` };
+    return { title: `PeliculasPro - ${genre.name} TV Series` };
   }
 
   if (CATEGORIES.includes(slug)) {
     const title = slug.replace(/_/g, ' ').toUpperCase();
-    return { title: `Justwatch - ${title} TV Series` };
+    return { title: `PeliculasPro - ${title} TV Series` };
   }
 
   // Logika untuk mengambil data TV show untuk metadata detail
@@ -98,13 +98,13 @@ export async function generateMetadata({ params }) {
   const socialImageAlt = `${tvShowData.name} poster`;
 
   return {
-    title: `Justwatch - ${tvShowData.name}`,
+    title: `PeliculasPro - ${tvShowData.name}`,
     description: tvShowData.overview,
     openGraph: {
       title: tvShowData.name,
       description: tvShowData.overview,
-      url: `https://justwatch-id.vercel.app/tv-show/${slug}`,
-      siteName: 'Justwatch',
+      url: `https://peliculaspro.netlify.app/tv-show/${slug}`,
+      siteName: 'PeliculasPro',
       images: [{ url: socialImage, width: 1200, height: 630, alt: socialImageAlt }],
       locale: 'en_US',
       type: 'website',

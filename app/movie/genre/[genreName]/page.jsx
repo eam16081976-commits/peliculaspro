@@ -14,17 +14,17 @@ export async function generateMetadata({ params }) {
   const genre = genres.find(g => g.name.toLowerCase().replace(/\s/g, '-') === genreName);
   const title = genre?.name || 'Unknown';
 
-  const pageUrl = `https://justwatch-id.vercel.app/movie/genre/${genreName}`;
-  const imageUrl = 'https://live.staticflickr.com/65535/54797489364_45a23b2498_b.jpg';
+  const pageUrl = `https://peliculaspro.netlify.app/movie/genre/${genreName}`;
+  const imageUrl = 'https://live.staticflickr.com/65535/55087845069_18949483bd_b.jpg';
 
   return {
-    title: `Justwatch - ${title} Movies`,
-    description: `Find and watch the best ${title} movies for free on Justwatch.`,
+    title: `PeliculasPro - ${title} Movies`,
+    description: `Find and watch the best ${title} movies for free on PeliculasPro.`,
     openGraph: {
-      title: `Justwatch - ${title} Movies`,
-      description: `Find and watch the best ${title} movies for free on Justwatch.`,
+      title: `PeliculasPro - ${title} Movies`,
+      description: `Find and watch the best ${title} movies for free on PeliculasPro.`,
       url: pageUrl,
-      siteName: 'Justwatch',
+      siteName: 'PeliculasPro',
       images: [
         {
           url: imageUrl,
@@ -40,8 +40,8 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       site: '@WatchStream123',
       creator: '@WatchStream123',
-      title: `Justwatch - ${title} Movies`,
-      description: `Find and watch the best ${title} movies for free on Justwatch.`,
+      title: `PeliculasPro - ${title} Movies`,
+      description: `Find and watch the best ${title} movies for free on PeliculasPro.`,
       images: [imageUrl],
     },
     other: {
